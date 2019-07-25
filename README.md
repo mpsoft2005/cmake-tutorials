@@ -20,3 +20,8 @@ set(UtilSrcs test_util.cpp math_util.cpp)
 
 ## 添加包含目录：include_directories
 include_directories("../thirdparty/jsoncpp/include")
+
+## 添加第三方库：OpenCV
+find_package(OpenCV REQUIRED)  
+include_directories( ${OpenCV_INCLUDE_DIRS} )  
+target_link_libraries( edge ${OpenCV_LIBS} )  
