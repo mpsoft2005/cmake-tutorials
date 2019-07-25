@@ -25,3 +25,8 @@ include_directories("../thirdparty/jsoncpp/include")
 find_package(OpenCV REQUIRED)  
 include_directories( ${OpenCV_INCLUDE_DIRS} )  
 target_link_libraries( edge ${OpenCV_LIBS} )  
+
+## 生成 vs2017 解决方案
+mkdir build  
+cd build  
+cmake -DOpenCV_DIR="D:\opencv\build" -G "Visual Studio 15 2017 Win64" ..  
