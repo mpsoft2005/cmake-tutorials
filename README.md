@@ -9,6 +9,10 @@ cmake_minimum_required (VERSION 2.6)
 ## 创建工程：project
 project (hello-world)
 
+## 添加宏定义
+add_definitions(-DFOO -DBAR)  
+add_definitions(-D_USE_MATH_DEFINES)  
+
 ## 添加可执行程序：add_executable
 add_executable(hello-world hello-world.cpp)
 
